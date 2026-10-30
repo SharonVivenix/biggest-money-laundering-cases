@@ -1,0 +1,110 @@
+[
+  {
+    "id": "wachovia",
+    "name": "Wachovia and the Mexican casas de cambio",
+    "years": "2004 to 2007",
+    "sector": "US retail bank",
+    "scale": "At least $373B in wires from Mexican currency exchange houses, over $420B in transactions not effectively monitored",
+    "outcome": "$160M in 2010 ($110M forfeiture plus $50M OCC penalty), deferred prosecution",
+    "control_failed": "Correspondent flows from foreign money service businesses never compared to what those businesses could plausibly earn",
+    "stage": "placement",
+    "rules": ["R1"],
+    "source": "https://www.justice.gov/archive/usao/fls/PressReleases/2010/100317-02.html"
+  },
+  {
+    "id": "hsbc",
+    "name": "HSBC and the Sinaloa and Norte del Valle cartels",
+    "years": "2006 to 2010",
+    "sector": "Global bank, US and Mexico units",
+    "scale": "At least $881M in drug proceeds laundered, $670B in HSBC Mexico wires and $9.4B in US dollar purchases left unmonitored",
+    "outcome": "About $1.9B in forfeiture and penalties in 2012, deferred prosecution",
+    "control_failed": "Mexico sat in the lowest risk tier, so bulk cash far above any customer profile went unreviewed",
+    "stage": "placement",
+    "rules": ["R2"],
+    "source": "https://www.justice.gov/opa/pr/hsbc-holdings-plc-and-hsbc-bank-usa-na-admit-anti-money-laundering-and-sanctions-violations"
+  },
+  {
+    "id": "danske",
+    "name": "Danske Bank Estonia branch",
+    "years": "2007 to 2015",
+    "sector": "Nordic bank, Baltic branch",
+    "scale": "About EUR 200B in non resident flows, $160B of it routed through US banks",
+    "outcome": "Guilty plea to conspiracy to commit bank fraud in 2022, about $2B forfeited",
+    "control_failed": "Non resident accounts moved money in and straight back out, and the branch ran on a separate IT system head office did not monitor",
+    "stage": "layering",
+    "rules": ["R3"],
+    "source": "https://www.justice.gov/opa/pr/danske-bank-pleads-guilty-fraud-us-banks-multi-billion-dollar-scheme-access-us-financial"
+  },
+  {
+    "id": "1mdb",
+    "name": "1MDB, Malaysia's sovereign fund",
+    "years": "2009 to 2014",
+    "sector": "Sovereign fund, investment banks",
+    "scale": "About $4.5B misappropriated, per the US Department of Justice",
+    "outcome": "Goldman Sachs paid about $2.9B in a 2020 global resolution, former prime minister Najib Razak convicted in 2020",
+    "control_failed": "Bond proceeds hopped through offshore shells and ended in art, property and a superyacht without anyone asking who the shells were",
+    "stage": "integration",
+    "rules": ["R4"],
+    "source": "https://www.justice.gov/opa/pr/goldman-sachs-charged-foreign-bribery-case-and-agrees-pay-over-29-billion"
+  },
+  {
+    "id": "bcci",
+    "name": "Bank of Credit and Commerce International",
+    "years": "1972 to 1991",
+    "sector": "International bank",
+    "scale": "Billions for cartels and corrupt officials, never fully quantified",
+    "outcome": "Shut down by regulators in several countries in July 1991",
+    "control_failed": "Incorporated in Luxembourg, run from London, booked through the Cayman Islands, so no single supervisor ever saw the whole bank",
+    "stage": "layering",
+    "rules": ["R6"],
+    "source": "https://irp.fas.org/congress/1992_rpt/bcci/"
+  },
+  {
+    "id": "nauru",
+    "name": "Nauru's offshore banking sector",
+    "years": "1990s to 2005",
+    "sector": "Offshore jurisdiction",
+    "scale": "An estimated $70B of Russian money in 1998, by a widely cited Russian central bank figure",
+    "outcome": "US Treasury Section 311 designation in 2002, removed from the FATF blacklist in 2005 after new AML laws",
+    "control_failed": "Hundreds of shell banks licensed from a single address with no supervision behind them",
+    "stage": "layering",
+    "rules": ["R6"],
+    "source": "https://www.fincen.gov/resources/statutes-and-regulations/311-special-measures"
+  },
+  {
+    "id": "capone",
+    "name": "Al Capone and cash fronts",
+    "years": "1920s",
+    "sector": "Organised crime, cash businesses",
+    "scale": "Unknown, the cash was never on paper",
+    "outcome": "Convicted of tax evasion in 1931, eleven year sentence",
+    "control_failed": "Nothing compared a cash business's takings with similar businesses on the same street",
+    "stage": "placement",
+    "rules": ["R7"],
+    "source": "https://www.fbi.gov/history/famous-cases/al-capone"
+  },
+  {
+    "id": "td_bank",
+    "name": "TD Bank",
+    "years": "2014 to 2024",
+    "sector": "US bank",
+    "scale": "92% of transaction volume, about $18.3T, unmonitored from 2018 to 2024, more than $670M moved by three laundering networks",
+    "outcome": "Guilty plea in October 2024, about $3B in combined penalties, OCC asset cap",
+    "control_failed": "Whole channels such as ACH and checks were excluded from automated monitoring, and the rule set stayed static for years",
+    "stage": "placement",
+    "rules": ["R5", "coverage"],
+    "source": "https://www.justice.gov/opa/pr/td-bank-pleads-guilty-bank-secrecy-act-and-money-laundering-conspiracy-violations-18b"
+  },
+  {
+    "id": "nevada_casinos",
+    "name": "Las Vegas Strip casinos and an illegal bookmaker",
+    "years": "2017 to 2023",
+    "sector": "Casinos",
+    "scale": "One illegal bookmaker gambled millions across three operators for years",
+    "outcome": "About $26.8M in Nevada fines in 2025 (Resorts World $10.5M, MGM $8.5M, Caesars $7.8M)",
+    "control_failed": "Player play was never tested against a credible source of funds",
+    "stage": "integration",
+    "rules": ["R8"],
+    "source": "https://cdcgaming.com/nevada-regulators-outline-reasons-behind-7-8-million-levied-against-caesars/"
+  }
+]

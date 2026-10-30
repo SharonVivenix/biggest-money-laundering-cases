@@ -1,0 +1,44 @@
+# Two jobs: the generated case table still matches cases.json, the rules still
+# catch every planted case, and every client and github.com link resolves.
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CLIENT_DOMAIN: www.idenfy.com
+
+jobs:
+  table-and-tests:
+    name: Table in sync, tests pass
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Case table matches cases.json
+        run: python casebook.py table --check
+      - name: Sample data is reproducible
+        run: |
+          python examples/make_transactions.py > /tmp/t.csv
+          diff -q /tmp/t.csv examples/transactions.example.csv
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+  links:
+    name: Links resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check client and github.com links
+        run: |
+          fail=0
+          for url in $(grep -oh "https://\($CLIENT_DOMAIN\|github\.com\)[^)\"< ]*" README.md | sed 's/[.,]$//' | sort -u); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 25 "$url" || echo 000)
+            if [ "$code" != "200" ]; then echo "  $code  $url"; fail=1; fi
+          done
+          exit $fail
