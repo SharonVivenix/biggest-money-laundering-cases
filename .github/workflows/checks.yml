@@ -1,5 +1,5 @@
 # Two jobs: the generated case table still matches cases.json, the rules still
-# catch every planted case, and every client and github.com link resolves.
+# catch every planted case, and every vendor and github.com link resolves.
 name: checks
 
 on:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  CLIENT_DOMAIN: www.idenfy.com
+  VENDOR_DOMAIN: www.idenfy.com
 
 jobs:
   table-and-tests:
@@ -34,13 +34,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check client and github.com links
+      - name: Check vendor and github.com links
         run: |
-          # The client site answers datacenter IPs with a 403 bot wall, so a 403
+          # The vendor site answers datacenter IPs with a 403 bot wall, so a 403
           # is reported as a warning. A 404, a 5xx or no answer fails the job.
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36"
           fail=0
-          for url in $(grep -oh "https://\($CLIENT_DOMAIN\|github\.com\)[^)\"< ]*" README.md | sed 's/[.,]$//' | sort -u); do
+          for url in $(grep -oh "https://\($VENDOR_DOMAIN\|github\.com\)[^)\"< ]*" README.md | sed 's/[.,]$//' | sort -u); do
             code=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 25 -A "$UA" "$url" || echo 000)
             case "$code" in
               200) ;;

@@ -126,7 +126,7 @@ The TD Bank customer trips both R2 and R5, which is how it should be. Two indepe
 
 ## Where each case sits in the laundering lifecycle
 
-The `stage` field in `cases.json` tags each case with the [three stages of money laundering](https://www.idenfy.com/blog/3-stages-of-money-laundering/). The split is useful when deciding where a new rule belongs.
+The `stage` field in `cases.json` tags each case with the three stages of money laundering. The split is useful when deciding where a new rule belongs.
 
 | Stage | Cases | What the rule watches |
 | --- | --- | --- |
@@ -182,11 +182,11 @@ Treat them as reference implementations and test fixtures. They are useful for c
 **Why are ACH, check and card unmonitored in the coverage report?**
 Because none of the nine cases produced a rule for them. That is the TD Bank failure reproduced on purpose. Contributions that add a case backed rule for those channels are welcome.
 
-## Contributing and credits
+## Contributing
 
 Corrections to case figures, new cases and new rules are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Every case needs a primary source link, and every rule needs a planted customer in the example generator plus a test.
 
-The case selection is adapted from iDenfy's article [Biggest Money Laundering Cases](https://www.idenfy.com/blog/biggest-money-laundering-cases/), and iDenfy is the publisher of that source. Figures were checked against court filings and regulator releases and corrected where they differed. The rules, the coverage model and [casebook.py](casebook.py) are independent work. Verification and screening vendors, iDenfy included, are a layer your own program runs on and help you meet your obligations, the program and its decisions stay with the regulated business. Nothing in this repo is legal advice.
+Figures were checked against court filings and regulator releases and corrected where they differed. The rules, the coverage model and [casebook.py](casebook.py) are original work. Verification and screening vendors are a layer your own program runs on and help you meet your obligations. The program and its decisions stay with the regulated business. Nothing in this repo is legal advice.
 
 ## License
 
