@@ -100,7 +100,7 @@ casino_buyin           1,174,813    4.9%  NONE, unmonitored
 monitored share of volume: 62.7%
 ```
 
-Two things are worth noticing. Dropping the ATM feed silently disables R5, so a missing channel takes rules down with it. And even with every channel ingested, this rule set reads nothing on ACH, check or card, which is a real gap in the repo, not a bug in the report. The command exits 1 below `--min-coverage` (default 0.95), so it can gate a deployment the same way a test suite does. For background on why ongoing monitoring has to cover every channel, see [transaction monitoring](https://www.idenfy.com/blog/transaction-screening-vs-transaction-monitoring/) versus one off screening.
+Two things are worth noticing. Dropping the ATM feed silently disables R5, so a missing channel takes rules down with it. And even with every channel ingested, this rule set reads nothing on ACH, check or card, which is a real gap in the repo, not a bug in the report. The command exits 1 below `--min-coverage` (default 0.95), so it can gate a deployment the same way a test suite does. For background on why ongoing monitoring has to cover every channel, see transaction monitoring versus one off screening.
 
 ## What a scan looks like
 
